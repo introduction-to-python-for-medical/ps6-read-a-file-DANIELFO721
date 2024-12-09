@@ -11,6 +11,3 @@ def create_codon_dict(file_path):
         codon_to_amino_acid[codon] = amino_acid
         
     return codon_to_amino_acid
-
-path = '/content/data/codons.txt'
-create_codon_dict(path)
