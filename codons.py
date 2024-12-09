@@ -1,4 +1,4 @@
-def create_codon_dict(file):
+def create_codon_dict(file_path):
     condon_to_amino_acid = {}
     for row in rows:
         cells = row.strip().split('\t')
