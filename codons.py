@@ -12,7 +12,5 @@ def create_codon_dict(file_path):
         
     return codon_to_amino_acid
 
-# קריאה לפונקציה עם הנתיב
 path = '/content/data/codons.txt'
-codon_dict = create_codon_dict(path)
-print(codon_dict)
+create_codon_dict(path)
