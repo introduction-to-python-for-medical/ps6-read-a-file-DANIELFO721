@@ -1,5 +1,5 @@
-path = '/content/data/codons.txt'
-file = open(path)
+file_path = '/content/data/codons.txt'
+file = open(file_path)
 rows = file.readlines()
 file.close()
 
