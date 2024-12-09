@@ -1,9 +1,8 @@
-file_path = '/content/data/codons.txt'
-file = open(file_path)
-rows = file.readlines()
-file.close()
-
 def create_codon_dict(file_path):
+    file_path = '/content/data/codons.txt'
+    file = open(file_path)
+    rows = file.readlines()
+    file.close()
     codonos_to_amino_acids = {}
     for row in rows:
       cells = row.strip().split('\t')
