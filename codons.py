@@ -1,16 +1,17 @@
-path = '/content/data/codons.txt'
-file = open(path)
-rows = file.readlines()
-file.close()
-
-def create_codon_dict(file):
-    condon_to_amino_acid = {}
+def create_codon_dict(file_path):
+    with open(file_path, 'r') as file:  # פתיחת הקובץ בתוך הפונקציה
+        rows = file.readlines()
+    
+    codon_to_amino_acid = {}
     for row in rows:
         cells = row.strip().split('\t')
         codon = cells[0]
         amino_acid = cells[2]
-        condon_to_amino_acid[codon] = amino_acid
+        codon_to_amino_acid[codon] = amino_acid
         
-    return condon_to_amino_acid
-  
-create_codon_dict(file)
+    return codon_to_amino_acid
+
+# קריאה לפונקציה עם הנתיב
+path = '/content/data/codons.txt'
+codon_dict = create_codon_dict(path)
+print(codon_dict)
