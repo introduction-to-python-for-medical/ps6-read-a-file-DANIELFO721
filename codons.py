@@ -1,6 +1,7 @@
 def create_codon_dict(file_path):
-    with open(file_path, 'r') as file:  # פתיחת הקובץ בתוך הפונקציה
+    file = open(path)
     rows = file.readlines()
+    file.close()
     
     codon_to_amino_acid = {}
     for row in rows:
